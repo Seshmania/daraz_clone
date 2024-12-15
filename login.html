@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page - Daraz Online Shopping</title>
+    <link rel="icon" type="image/png" href="/img/favicon.png" />
+
+    <script>
+        // JavaScript for interactive Add to Cart button
+document.addEventListener('DOMContentLoaded', function() {
+    const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            alert('Product added to cart!');
+        });
+    });
+
+    // Optional: Add event listener for search bar (if you want to handle search interaction)
+    const searchInput = document.getElementById('search');
+    searchInput.addEventListener('focus', function() {
+        searchInput.style.border = '2px solid #ff6600'; // Orange border on focus
+    });
+
+    searchInput.addEventListener('blur', function() {
+        searchInput.style.border = 'none'; // Remove border when search input is out of focus
+    });
+});
+
+    </script>
+    <style>
+   /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Light grey background for contrast */
+    color: #333; /* Default text color for good readability */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    background-color: #ff6600; /* Orange background */
+    color: #fff;
+    padding: 15px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Header Content */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Search Bar Styling */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 60%;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+}
+
+.search-bar input[type="text"]::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+.search-bar button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.search-bar button img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1); /* White icon */
+}
+
+/* Logo Styling */
+.logo img {
+    width: 120px;
+    height: auto;
+}
+
+/* Navigation Bar */
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    flex-grow: 1;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd1a3; /* Light orange on hover */
+}
+
+/* Main Content Styling */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Image Styling */
+main img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Featured Products Section */
+.products {
+    padding: 40px 20px;
+    background-color: #333; /* Dark background for contrast */
+    color: white;
+}
+
+.products h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #ff6600; /* Orange for the heading */
+    text-transform: uppercase;
+}
+
+/* Product Container */
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Product Styling */
+.product {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-10px); /* Hover effect */
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-name {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #ff6600; /* Bright Orange for Product Name */
+}
+
+.product-description {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #666; /* Grey for description text for better readability */
+}
+
+.product-price {
+    font-size: 16px;
+    color: #ff6600; /* Bright Orange for Price */
+    font-weight: bold;
+}
+
+.add-to-cart-btn {
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #e65c00; /* Darker orange */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #ff6600; /* Matching footer color */
+    color: white;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #ffd1a3;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* Button Effects (JavaScript-enabled interactive button) */
+.add-to-cart-btn:focus, .search-bar input:focus {
+    outline: 2px solid #ff6600; /* Orange outline on focus */
+}
+</style>
+</head>
+<body>
+
+  
+    <form action="/submit_form" method="post"> 
+
+        <!-- Phone Number or Email -->
+        <label for="contact">Please enter your Phone Number or Email:</label>
+        <input type="text" id="contact" name="contact" required placeholder="Phone Number or Email"><br>
+
+        <!-- Password -->
+        <label for="password">Please enter your password:</label>
+        <input type="password" id="password" name="password" required placeholder="Password"><br>
+
+        <!-- Forgot Password -->
+        <a href="/forgot-password" style="text-decoration: none; font-size: 14px; color: #007BFF;">Forgot password?</a><br><br>
+
+        <!-- Login Button -->
+        <input type="submit" value="Login"><br><br>
+
+        <!-- Sign-up Link -->
+        <p>Don't have an account? <br><a href="/signup.html" style="color: #007BFF;">Sign up</a></p><br>
+
+        <!-- Social Login Options -->
+        <p>Or <br>log in with:</p><br>
+          <span> 
+            <a href="https://google.com"><img src="/img/google.png" alt="" height="100" width="100"></a>
+            <a href="https://facebook.com"><img src="/img/facebook.png" alt="" height="100" width="100"></a>
+         </span>
+        
+        
+        </button>
+    </form>
+
+</body>
+</html>
